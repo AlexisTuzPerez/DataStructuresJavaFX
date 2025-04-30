@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto_final_ed.controllers.StackController" styleClass="scene"  alignment="CENTER"  spacing="20" VBox.vgrow="ALWAYS">
+
+    <Label text="Pila"   styleClass="mainText" />
+    <Label fx:id="confirmText" text=""    />
+
+
+    <Label text="Se está limpiando una repisa del mostrador, los artículos se guardan en una caja y se guarda en una pila"   />
+    <Label text="Antes de añadir, debe asegurarse que el producto exista."   />
+
+
+    <HBox fx:id="box" alignment="CENTER"  spacing="20">
+
+
+        <TextField  fx:id= "idInput" text="id_producto" styleClass="entrada"  />
+        
+        <Button fx:id="addProductos" text="Recoger (añadirlo a pila) "  onAction="#addProducts" styleClass="background" /> 
+
+
+        <Button fx:id="deleteFromStack" text="Sacar de la pila"  onAction="#deleteFromStack" styleClass="background" /> 
+
+
+
+    </HBox> 
+
+        <ScrollPane fx:id="scrollPane"    fitToWidth="true"   styleClass="scrollPane" vbarPolicy="NEVER"   visible="true">
+            <content>
+
+                <VBox fx:id="contentBox" alignment="CENTER" spacing="10" prefWidth="200"  prefHeight="300" styleClass="scrollPane">
+
+
+                </VBox>
+            </content>
+        </ScrollPane> 
+
+
+        <Button fx:id="backMenu" text="Regresar"  onAction="#backMenu" styleClass="background" /> 
+
+
+ 
+</VBox>

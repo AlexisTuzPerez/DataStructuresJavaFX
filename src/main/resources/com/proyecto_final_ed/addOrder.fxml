@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto_final_ed.controllers.AddOrderController" styleClass="scene"  alignment="CENTER"  spacing="20">
+
+    <Label text="Agregar Orden (Arreglos)"   styleClass="mainText" />
+    <Label fx:id="confirmText" text=""    />
+
+    <HBox   alignment="CENTER"  spacing ="10"  >
+
+        <Label fx:id="texto" text="Agrege la información correspondiente: "   />
+        <Button text="?"    styleClass="infoText"  onAction="#infoText" />
+  
+     </HBox>
+
+
+
+
+
+
+    <HBox alignment ="CENTER" spacing="10">
+
+        <TextField  fx:id= "deleteOrderInput" text="Eliminar_pedido" styleClass="entrada" /> 
+        
+
+        <Button fx:id="deleteOrderButton" text="Eliminar Pedido" onAction="#deleteOrder" styleClass="background"/>
+    
+
+    </HBox>
+
+    <HBox   alignment="CENTER" spacing="20"    >
+
+        <TextField  fx:id= "idInput" text="Id" styleClass="entrada" /> 
+        <TextField  fx:id= "amountInput" text="Cantidad" styleClass="entrada"  />
+
+
+        <Button fx:id="addProductToOrder" text="Agregar Producto" onAction="#addProductsToOrder" styleClass="background"/> 
+
+    </HBox>
+
+
+
+        <ScrollPane fx:id="scrollPane"    fitToWidth="true"   styleClass="scrollPane" vbarPolicy="NEVER"   visible="true">
+            <content>
+                <VBox fx:id="contentBox" alignment="CENTER" spacing="10" prefWidth="200" prefHeight="200" styleClass="scrollPane">
+
+
+                </VBox>
+            </content>
+        </ScrollPane> 
+
+
+    <Button fx:id="saveProductsToOrder" text="saveOrder" onAction="#saveOrder" styleClass="background"/> 
+    <Button fx:id="backMenu" text="Regresar" onAction="#backMenu" styleClass="background"/> 
+
+</VBox>

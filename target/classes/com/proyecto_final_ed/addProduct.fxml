@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+
+<?import javafx.scene.control.SplitMenuButton?>
+
+<?import javafx.geometry.Insets?>
+
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto_final_ed.controllers.AddProductController" styleClass="scene"  alignment="CENTER"  spacing="20">
+
+
+    <Label text="Agregar Producto (Listas)"   styleClass="mainText" />
+    <Label fx:id="confirmText" text=""    />
+
+    
+   <HBox   alignment="CENTER"   spacing ="10" >
+
+
+        <Label fx:id="texto" text="Agrege la información correspondiente:"   />
+
+        <Button text="?"    styleClass="infoText"  onAction="#infoText" />
+
+
+    </HBox>
+
+
+
+    <HBox   alignment="CENTER" spacing="20"    >
+
+        <TextField  fx:id= "nameInput" text="Nombre" styleClass="entrada"  />
+        <TextField  fx:id= "autorInput" text="Autor" styleClass="entrada"  />
+        <MenuButton fx:id="categoryMenu" text="Category" styleClass="entrada">
+            <items>
+                <MenuItem fx:id="albumOption" text="Album"  onAction="#option" styleClass="option"/>
+                <MenuItem fx:id="singleOption" text="Single"  onAction="#option" styleClass="option"/>
+                <MenuItem fx:id="other" text="Otro" onAction="#option" styleClass="option"/>
+
+
+       
+            </items>
+            
+        </MenuButton>
+
+   
+    </HBox>
+
+    <HBox  alignment="CENTER"  spacing="20">
+
+        <TextField fx:id= "priceInput" text="Precio"  styleClass="entrada" />
+
+        <Button fx:id="primaryButton" text="Agregar Producto" onAction="#addProduct" styleClass="background"/>
+
+    </HBox>
+
+    <Button fx:id="backButton" text="Regresar" onAction="#backMenu" styleClass="background"/>
+
+ 
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto_final_ed.controllers.SeeOrdersController" styleClass="scene"  alignment="CENTER"  spacing="20"  VBox.vgrow="ALWAYS">
+
+    <Label text="Ordenes agregadas (Cola): "   styleClass="mainText" />
+
+    <HBox   alignment="CENTER"  spacing ="10"  >
+
+        <Label fx:id="confirmText" text=""    />
+        <Button text="?"    styleClass="infoText"  onAction="#infoText" />
+  
+
+    </HBox>
+
+
+
+    <HBox fx:id="box" alignment="CENTER"  spacing="20">
+        <Button fx:id="showOrdersButton" text="Show Orders"  onAction="#showOrders" styleClass="background" />
+
+        <Button fx:id="deleteFromQueue" text="Entregar Pedido (eliminar de la cola Pop)"   onAction="#popOrderFromQueue"  styleClass="seeOrdersButton"  prefWidth="300"/>
+
+
+
+    </HBox> 
+
+        <ScrollPane fx:id="scrollPane"    fitToWidth="true"   styleClass="scrollPane" vbarPolicy="NEVER"   visible="true">
+            <content>
+
+                <VBox fx:id="contentBox" alignment="CENTER" spacing="10" prefWidth="200" prefHeight="200" styleClass="scrollPane">
+
+           
+
+                </VBox>
+            </content>
+        </ScrollPane> 
+
+        <Button fx:id="backMenu" text="Regresar" onAction="#backMenu" styleClass="background"/> 
+
+
+
+ 
+</VBox>

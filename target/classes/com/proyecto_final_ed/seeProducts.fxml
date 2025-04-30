@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+
+
+<?import javafx.geometry.Insets?>
+
+
+
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto_final_ed.controllers.SeeProductsController" styleClass="scene"  alignment="CENTER"  spacing="10" VBox.vgrow="ALWAYS">
+
+    <Label text="Ver Productos (Listas y QuickSort)"   styleClass="mainText" />
+
+    <Label fx:id="confirmText" text=""    />
+
+
+    <HBox   alignment="CENTER" >
+
+        <Label fx:id="texto" text="Scroll: "   /> 
+
+  
+        <Button text="?"    styleClass="infoText"  onAction="#infoText" />
+  
+  
+     </HBox>
+
+    <HBox alignment ="CENTER" spacing="10">
+
+        <TextField  fx:id= "deleteProductInput" text="Eliminar_producto" styleClass="entrada" /> 
+        
+
+        <Button fx:id="deleteProductButton" text="Eliminar Producto" onAction="#deleteProduct" styleClass="background"/>
+    
+
+    </HBox>
+
+
+    <HBox alignment ="CENTER" spacing="10">
+
+        <Button fx:id="showProductsButton" text="Show Products" onAction="#showProductsInScreen" styleClass="background"/>
+
+        <Button fx:id="sortButton" text="Ordernar productos" onAction="#sortInScreen" styleClass="background"/>
+    
+
+    </HBox>
+
+ 
+
+    <ScrollPane fx:id="scrollPane"    fitToWidth="true"   styleClass="scrollPane" vbarPolicy="NEVER"   visible="false">
+            <content>
+                <VBox fx:id="contentBox" alignment="CENTER" spacing="10" prefWidth="400" prefHeight="250" styleClass="scrollPane">
+
+                
+                </VBox>
+            </content>
+        </ScrollPane> 
+
+
+    <Button fx:id="backButton" text="Regresar" onAction="#backMenu" styleClass="background"/>
+
+
+
+
+
+
+</VBox>
